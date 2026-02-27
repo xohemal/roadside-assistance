@@ -1,0 +1,175 @@
+.request-service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.map-container {
+  height: 400px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-loading {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+/* Leaflet map fixes */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 10px 15px;
+  font-family: inherit;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.location-info {
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-bottom: 12px;
+}
+
+.address {
+  font-size: 15px;
+  color: #7F8C8D;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.coordinates {
+  font-size: 13px;
+  color: #95A5A6;
+  margin-bottom: 15px;
+  font-family: monospace;
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  color: #FF69B4;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.refresh-button:hover {
+  color: #FF1493;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.service-button {
+  background: white;
+  border: 2px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-button:hover {
+  border-color: #FF69B4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+}
+
+.service-button.active {
+  border-color: #FF1493;
+  background-color: #FFF0F5;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+}
+
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.service-name {
+  font-size: 14px;
+  color: #7F8C8D;
+  font-weight: 500;
+}
+
+.service-button.active .service-name {
+  color: #FF1493;
+  font-weight: 600;
+}
+
+.text-input {
+  width: 100%;
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #FF69B4;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-icon {
+    font-size: 28px;
+  }
+
+  .service-name {
+    font-size: 12px;
+  }
+}
